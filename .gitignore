@@ -1,0 +1,6 @@
+*.bin
+backup/
+config/
+libs/
+*.bin
+credentials.h
