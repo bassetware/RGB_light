@@ -1,10 +1,10 @@
 #define SW_VERSION  "0.5.0"
-//#include "config/config_schlafzimmer.h"
-#include "config/config_wohnzimmer.h"
-//#include "config/config_tuerme.h"
-//#include "config/config_Wohnzimmer_Deckenlampe.h"
-//#include "config/config_test.h"
-//#include "config/config_iTanne.h"
+#include "./config/config_schlafzimmer.h"
+//#include "./config/config_wohnzimmer.h"
+//#include "./config/config_tuerme.h"
+//#include "./config/config_Wohnzimmer_Deckenlampe.h"
+//#include "./config/config_test.h"
+//#include "./config/config_iTanne.h"
 
 #include <WiFi.h>
 #include <PubSubClient.h>
