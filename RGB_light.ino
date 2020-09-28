@@ -1,5 +1,6 @@
 #define SW_VERSION  "0.5.0"
-#include "./config/config_schlafzimmer.h"
+//#include "./config/config_schlafzimmer.h"
+#include "./config/config_garten.h"
 //#include "./config/config_wohnzimmer.h"
 //#include "./config/config_tuerme.h"
 //#include "./config/config_Wohnzimmer_Deckenlampe.h"
@@ -401,7 +402,7 @@ void setup() {
     mark_start += section_count[i];
   }
   //Change here for other chipsets:
-  FastLED.addLeds<WS2812B, data_pin, GRB>(frontbuffer, SERIAL_LEDS); //For other chipsets look into the FastLED documentation
+  FastLED.addLeds<WS2811, data_pin, RBG>(frontbuffer, SERIAL_LEDS); //For other chipsets look into the FastLED documentation
 //  xTaskCreatePinnedToCore(
 //                    serial_led_loop,   /* Task function. */
 //                    "SERIAL LEDs",     /* name of task. */

@@ -15,14 +15,14 @@
  */
 #define MASTER_NAME "example"
  
-#define L1_NAME "rgbw1"
-#define CH1_RGBW
-//#define CH1_RGB
+#define L1_NAME "rgb1"
+//#define CH1_RGBW
+#define CH1_RGB
 //#define CH1_SINGLE 
 
 #define L2_NAME "white1"
 //#define CH2_RGB
-//#define CH2_SINGLE
+#define CH2_SINGLE
 
 
 #define L3_NAME "white2"

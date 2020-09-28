@@ -100,6 +100,7 @@ void setup_wifi() {
   // We start by connecting to a WiFi network
   Serial.println();
   Serial.println();
+  MDNS.begin(MASTER_NAME);
   WiFi.setHostname(MQTT_CLIENT_ID);
   WiFi.onEvent(WiFiEvent);
   WiFi.onEvent(WiFiGotIP, WiFiEvent_t::SYSTEM_EVENT_STA_GOT_IP);

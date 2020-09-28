@@ -612,28 +612,6 @@ void callback_new(char* topic, byte* payload, unsigned int length) {
       }
     }
   } else if (!strcmp(topic, MQTT_LIGHT_BRIGHTNESS_COMMAND_TOPIC_CH1)) {
-      if (!strcmp(mqttbuffer, BRIGHTNESS_INCREASE)) {
-        lampe_CH1.brightness_next = lampe_CH1.brightness_next + (4095 / 5);
-        if(lampe_CH1.brightness_next > 3800) {
-          lampe_CH1.brightness_next = 4095;
-        }
-        lampe_CH1.brightness_old = lampe_CH1.brightness;
-        lampe_CH1.change = true;
-        lampe_CH1.lastchange = millis();
-        publishLIGHTBrightness();
-        return;       
-      } 
-      else if (!strcmp(mqttbuffer, BRIGHTNESS_DECREASE)) {
-        lampe_CH1.brightness_next = lampe_CH1.brightness_next - (4095 / 5);
-        if(lampe_CH1.brightness_next <0 ) {
-          lampe_CH1.brightness_next = 0;
-        }
-        lampe_CH1.brightness_old = lampe_CH1.brightness;
-        lampe_CH1.change = true;
-        lampe_CH1.lastchange = millis();
-        publishLIGHTBrightness();
-        return;  
-      }  
       uint16_t brightness = atoi(mqttbuffer);
       if (brightness < 0 || brightness > 4095) {
       // do nothing...

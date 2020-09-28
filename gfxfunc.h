@@ -552,7 +552,7 @@ void Master_fadeSerialBrightness(lampeSERIAL *lampe_ptr) {
   //Serial.print("B: ");Serial.println(m_msg_buffer);
   for(int i = 0; i < SERIAL_COUNT; i++) {
      fadeRGBBrightness(&lampe_ptr->section[i].lampe);
-     Serial.print("S");Serial.print(i);
+     //Serial.print("S");Serial.print(i);
      //updateSerialBrightness(&lampe_ptr->section[i]);
      //write_Section(&lampe_ptr->section[i]);
   }
